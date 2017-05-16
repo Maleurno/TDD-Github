@@ -12,6 +12,10 @@ public class AsocArrayTest {
 	
 	@Before
 	public void before(){
+		array.put("nombre", "luis");
+		array.put("apellido", "martin");
+		array.put("dni", "12345567P");
+		array.put("pais", "españa");
 	}
 
 	@Test
