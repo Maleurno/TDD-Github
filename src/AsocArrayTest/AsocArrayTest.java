@@ -26,6 +26,8 @@ public class AsocArrayTest {
 
 	@Test
 	public void pruebaPut() {
+		array.put("provincia", "malaga");
+		assertEquals("malaga",array.get("provincia"));
 	}
 
 }
