@@ -2,6 +2,7 @@ package AsocArrayTest;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,6 +17,10 @@ public class AsocArrayTest {
 		array.put("apellido", "martin");
 		array.put("dni", "12345567P");
 		array.put("pais", "españa");
+	}
+	
+	@After
+	public void after(){
 	}
 
 	@Test
