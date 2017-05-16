@@ -21,6 +21,7 @@ public class AsocArrayTest {
 	
 	@After
 	public void after(){
+		array = null;
 	}
 
 	@Test
