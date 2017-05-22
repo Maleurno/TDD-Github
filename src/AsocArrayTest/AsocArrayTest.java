@@ -4,7 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import AsocArray.AsocArray;
 
@@ -49,6 +51,9 @@ public class AsocArrayTest {
 	public void pruebaSize(){
 		
 	}
+	
+	@Rule
+	public ExpectedException e = ExpectedException.none();
 	
 	@Test
 	public void pruebaGet(){
