@@ -9,7 +9,7 @@ public class AsocArray {
 		String Valor;
 	}
 	
-	private ArrayList <conjunto> AsocArray;
+	public ArrayList<conjunto> AsocArray;
 	
 	public void put(String clave, String valor){
 		conjunto c=new conjunto();
@@ -29,7 +29,7 @@ public class AsocArray {
 	}
 	
 	public String get(String clave){
-		String valor_resultado = null;
+		String valor_resultado = "null";
 		conjunto aux = getConjunto(clave);
 		if(aux != null){
 			valor_resultado = aux.Valor;
