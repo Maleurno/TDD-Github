@@ -18,14 +18,22 @@ public class AsocArray {
 		AsocArray.add(c);
 	}
 	
-	public String get(String clave){
-		String valor_resultado = null;
+	private conjunto getConjunto(String clave){
+		conjunto result = null;
 		for(conjunto aux:AsocArray){
 			if(aux.Clave==clave){
-				valor_resultado = aux.Valor;
+				result = aux;
 			}
 		}
-		if(valor_resultado == null){
+		return result;
+	}
+	
+	public String get(String clave){
+		String valor_resultado = null;
+		conjunto aux = getConjunto(clave);
+		if(aux != null){
+			valor_resultado = aux.Valor;
+		}else{
 			throw new UndefinedKeyException("No se admite número negativo");
 		}
 		return valor_resultado;
@@ -33,30 +41,34 @@ public class AsocArray {
 	
 	public String getOrElse(String clave, String porDefecto){
 		String valor_resultado = porDefecto;
-		for(conjunto aux:AsocArray){
-			if(aux.Clave==clave){
-				valor_resultado = aux.Valor;
-			}
+		conjunto aux = getConjunto(clave);
+		if(aux != null){
+			valor_resultado = aux.Valor;
 		}
 		return valor_resultado;
 	}
 	
 	public boolean containKeys(String clave){
+		boolean result = false;
 		for(conjunto aux:AsocArray){
 			if(aux.Clave==clave){
-				return true;
+				result = true;
 			}
 		}
-		return false;
+		return result;
 	}
 	
 	public boolean remove(String clave){
-		for(conjunto aux:AsocArray){
-			if(aux.Clave==clave){
-				return AsocArray.remove(aux);
-			}
+		boolean result = false;
+		conjunto aux = getConjunto(clave);
+		if(aux != null){
+			result = AsocArray.remove(aux);
 		}
-		return false;
+		return result;
+	}
+	
+	public int size(){
+		return AsocArray.size();
 	}
 
 }

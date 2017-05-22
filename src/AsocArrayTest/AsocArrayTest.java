@@ -29,5 +29,25 @@ public class AsocArrayTest {
 		array.put("provincia", "malaga");
 		assertEquals("malaga",array.get("provincia"));
 	}
+	
+	@Test
+	public void pruebaGetOrElse(){
+		
+	}
+	
+	@Test
+	public void pruebaContainKey(){
+		
+	}
+	
+	@Test
+	public void pruebaRemove(){
+		
+	}
+	
+	@Test
+	public void pruebaSize(){
+		
+	}
 
 }
