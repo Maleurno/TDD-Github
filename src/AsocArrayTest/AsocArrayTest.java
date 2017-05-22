@@ -49,5 +49,10 @@ public class AsocArrayTest {
 	public void pruebaSize(){
 		
 	}
+	
+	@Test
+	public void pruebaGet(){
+		
+	}
 
 }
