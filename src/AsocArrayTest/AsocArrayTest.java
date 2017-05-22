@@ -52,11 +52,16 @@ public class AsocArrayTest {
 		
 	}
 	
+	@Test
+	public void pruebaGet(){
+		
+	}
+	
 	@Rule
 	public ExpectedException e = ExpectedException.none();
 	
 	@Test
-	public void pruebaGet(){
+	public void pruebaGetException(){
 		
 	}
 
