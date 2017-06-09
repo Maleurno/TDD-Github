@@ -16,6 +16,7 @@ public class AsocArrayTest {
 	
 	@Before
 	public void before(){
+		array =new AsocArray();
 		array.put("nombre", "luis");
 		array.put("apellido", "martin");
 		array.put("dni", "12345567P");
